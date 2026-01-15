@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Quintin “Vyrelic” Longardner — Personal Brand</title>
+  <meta name="description" content="Executive personal brand site for Quintin “Vyrelic” Longardner — esports leadership, operations, cybersecurity & global policy." />
+
+  <style>
+    :root{
+      --bg: #0b0f16;
+      --panel: rgba(17,24,38,.72);
+      --panel2: rgba(0,0,0,.18);
+      --text: #e7ecf3;
+      --muted: #aab6c6;
+      --line: rgba(255,255,255,.10);
+
+      --accent: #d8b36a;   /* formal gold */
+      --accent2: #8aa4c6;  /* steel blue */
+
+      --shadow: 0 16px 50px rgba(0,0,0,.38);
+      --radius: 18px;
+      --max: 1120px;
+
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+
+      --tight: 1.45;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      background:
+        radial-gradient(1100px 700px at 20% 0%, rgba(216,179,106,.12), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(138,164,198,.12), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: var(--tight);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a{ color: var(--text); text-decoration: none; }
+    a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 32px 18px 84px; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky; top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,22,.78);
+      border-bottom: 1px solid var(--line);
+      z-index: 50;
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      min-width: 320px;
+    }
+    .brand .name{
+      font-family: var(--serif);
+      letter-spacing: .18px;
+      font-weight: 800;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+    .brand .role{
+      color: var(--muted);
+      font-size: 12.5px;
+      border-left: 1px solid var(--line);
+      padding-left: 10px;
+      margin-left: 2px;
+      white-space: nowrap;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    nav a{
+      color: var(--muted);
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.03);
+      text-decoration:none;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top: 26px;
+      padding: 36px 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(17,24,38,.90), rgba(15,23,36,.74));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:-140px -220px auto auto;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle at 30% 30%, rgba(216,179,106,.26), transparent 62%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .kicker{
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    h1{
+      font-family: var(--serif);
+      margin: 0 0 10px;
+      font-size: 40px;
+      letter-spacing: .25px;
+      line-height: 1.12;
+    }
+    .subtitle{
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 15.5px;
+      max-width: 76ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-size: 13.5px;
+      text-decoration:none;
+    }
+    .btn:hover{
+      border-color: rgba(216,179,106,.35);
+      background: rgba(216,179,106,.07);
+      text-decoration:none;
+    }
+    .btn.primary{
+      border-color: rgba(216,179,106,.52);
+      background: linear-gradient(180deg, rgba(216,179,106,.20), rgba(216,179,106,.08));
+    }
+    .btn.ghost{
+      border-color: rgba(255,255,255,.12);
+      background: rgba(0,0,0,.12);
+    }
+
+    .hero-card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: var(--panel2);
+    }
+    .hero-card h3{
+      font-family: var(--serif);
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .meta{ display:grid; gap: 10px; }
+    .meta-row{
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: 1px dashed rgba(255,255,255,.10);
+      padding-bottom: 10px;
+    }
+    .meta-row:last-child{ border-bottom: none; padding-bottom: 0; }
+    .meta-row strong{ color: var(--text); font-weight: 650; }
+
+    .executive-summary{
+      margin-top: 14px;
+      padding: 14px 14px 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+      position: relative;
+      overflow:hidden;
+    }
+    .executive-summary::before{
+      content:"";
+      position:absolute;
+      left:0; top:0; bottom:0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(216,179,106,.75), rgba(138,164,198,.55));
+    }
+    .executive-summary .label{
+      color: var(--accent);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+    .executive-summary p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    /* Sections */
+    section{
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    .sec-h{
+      padding: 16px 18px;
+      display:flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,.16);
+    }
+    .sec-h h2{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .sec-h .hint{
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .sec-b{ padding: 16px 18px 18px; }
+
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+    .item{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .item .top{
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .item .title{
+      font-weight: 720;
+      letter-spacing: .12px;
+    }
+    .item .when{
+      color: var(--muted);
+      font-size: 12.5px;
+      white-space: nowrap;
+    }
+    .item .org{
+      color: var(--accent2);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .item p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .item ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .contact-card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+    .contact-list{
+      display:grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .contact-row{
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      font-size: 13.5px;
+    }
+    .contact-row span{ color: var(--muted); }
+
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12.5px;
+      text-align:center;
+      padding: 18px 10px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      h1{ font-size: 32px; }
+      .brand{ min-width: auto; }
+    }
+
+    @media print{
+      .topbar{ position: static; background: #fff; color: #000; }
+      body{ background:#fff; color:#000; }
+      section, .hero{ box-shadow:none; background:#fff; border-color:#ddd; }
+      .sec-h{ background:#fff; }
+      .tag, .btn{ border-color:#ddd; }
+      a{ color:#000; text-decoration:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="name">Quintin “Vyrelic” Longardner</div>
+        <div class="role">Founder • Esports Operations • Cybersecurity & Global Policy</div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#identity">Identity</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Executive Personal Brand</p>
+          <h1>Quintin “Vyrelic” Longardner</h1>
+          <p class="subtitle">
+            Founder and operations-focused leader building structured esports organizations, recruiting pipelines, and execution systems—
+            informed by academic training in cybersecurity and global policy.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Contact</a>
+
+            <!-- Resume PDF inserted here -->
+            <a class="btn ghost" href="./Quintin_Longardner_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+
+            <!-- Portfolio page inserted here -->
+            <a class="btn ghost" href="./portfolio.html">Portfolio</a>
+
+            <a class="btn" href="https://www.linkedin.com/in/quintin-longardner-347610391/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="#" onclick="window.print(); return false;">Print / Save as PDF</a>
+          </div>
+
+          <div class="executive-summary">
+            <div class="label">Executive Summary</div>
+            <p>
+              I specialize in operational clarity: setting standards, building repeatable workflows, and executing consistently.
+              My work centers on esports organization building (recruiting, evaluation, and infrastructure) with a disciplined,
+              documentation-first approach.
+            </p>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Professional details">
+          <h3>At a Glance</h3>
+          <div class="meta">
+            <div class="meta-row"><span>Email</span><strong>vyrelic@gmail.com</strong></div>
+            <div class="meta-row"><span>Brand Name</span><strong>Vyrelic</strong></div>
+            <div class="meta-row"><span>Primary Domain</span><strong>Esports Operations</strong></div>
+            <div class="meta-row"><span>Academic Focus</span><strong>Cybersecurity & Global Policy</strong></div>
+            <div class="meta-row"><span>Strengths</span><strong>Leadership • Systems • Recruiting</strong></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="sec-h">
+        <h2>About</h2>
+        <div class="hint">Formal overview</div>
+      </div>
+      <div class="sec-b">
+        <p style="margin:0; color: var(--muted); max-width: 92ch;">
+          I operate with a builder’s mindset: define the standard, create repeatable systems, execute consistently,
+          and measure outcomes. My work spans esports leadership (team building, talent identification, and operations),
+          brand development, and disciplined documentation—supported by a growing foundation in cybersecurity and global policy.
+        </p>
+
+        <div class="grid2" style="margin-top:14px;">
+          <div class="item">
+            <div class="top"><div class="title">What I’m Known For</div></div>
+            <ul>
+              <li>Designing organized operations that convert goals into weekly execution.</li>
+              <li>Identifying talent and building structured recruiting pipelines.</li>
+              <li>Building clear brand systems across Discord, content, and documentation.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">How I Work</div></div>
+            <ul>
+              <li>High standards, measurable expectations, and consistent follow-through.</li>
+              <li>Documentation-first workflows to keep teams aligned and scalable.</li>
+              <li>Clear communication with direct accountability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="identity">
+      <div class="sec-h">
+        <h2>Identity</h2>
+        <div class="hint">Personal brand pillars</div>
+      </div>
+      <div class="sec-b">
+        <div class="grid3">
+          <div class="item">
+            <div class="top"><div class="title">Founder & Operator</div></div>
+            <div class="org">Building teams and infrastructure</div>
+            <p>
+              I build operational systems that keep organizations aligned: role clarity, documentation, workflows,
+              recruiting, and execution plans.
+            </p>
+            <div class="tags">
+              <span class="tag">Operations</span>
+              <span class="tag">Systems</span>
+              <span class="tag">Leadership</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">Esports & Competition</div></div>
+            <div class="org">Fortnite-focused ecosystem</div>
+            <p>
+              I contribute to high-performance environments through talent evaluation, standards, and repeatable pipelines—
+              from tryouts to roster development.
+            </p>
+            <div class="tags">
+              <span class="tag">Talent Scouting</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Team Building</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">Cybersecurity & Policy</div></div>
+            <div class="org">Risk-aware decision making</div>
+            <p>
+              My academic focus informs how I think: incentives, governance, threat models, and the operational realities of secure systems.
+            </p>
+            <div class="tags">
+              <span class="tag">Security Mindset</span>
+              <span class="tag">Policy</span>
+              <span class="tag">Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="sec-h">
+        <h2>Work</h2>
+        <div class="hint">Experience & responsibilities</div>
+      </div>
+      <div class="sec-b">
+        <div class="item" style="margin-bottom:12px;">
+          <div class="top">
+            <div class="title">Founder & Executive Director</div>
+            <div class="when">Present</div>
+          </div>
+          <div class="org">Frostbane Esports</div>
+          <ul>
+            <li>Build and manage operational structure: documentation, workflows, and organization standards.</li>
+            <li>Lead recruiting, tryout pipelines, and talent evaluation with a Fortnite-first approach.</li>
+            <li>Develop internal systems for execution, communication, and performance tracking.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Org Building</span>
+            <span class="tag">Recruiting</span>
+            <span class="tag">Operations</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <div class="title">Digital Records Management Intern</div>
+            <div class="when">Experience</div>
+          </div>
+          <div class="org">Shrewsberry & Associates</div>
+          <ul>
+            <li>Digitize physical records into structured electronic archives for long-term accessibility.</li>
+            <li>Apply consistent naming conventions and folder standards to improve retrieval and audit readiness.</li>
+            <li>Maintain accuracy and confidentiality while handling sensitive documentation workflows.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Documentation</span>
+            <span class="tag">Process</span>
+            <span class="tag">Accuracy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="sec-h">
+        <h2>Skills</h2>
+        <div class="hint">Capabilities & strengths</div>
+      </div>
+      <div class="sec-b">
+        <div class="grid2">
+          <div class="item">
+            <div class="top"><div class="title">Leadership & Operations</div></div>
+            <div class="tags">
+              <span class="tag">Operational Planning</span>
+              <span class="tag">Workflow Design</span>
+              <span class="tag">Process Documentation</span>
+              <span class="tag">Talent Scouting</span>
+              <span class="tag">Stakeholder Communication</span>
+              <span class="tag">Team Standards</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">Technical & Tools</div></div>
+            <div class="tags">
+              <span class="tag">Google Workspace</span>
+              <span class="tag">Discord Operations</span>
+              <span class="tag">Content Workflows</span>
+              <span class="tag">Analytics Mindset</span>
+              <span class="tag">OBS / Streaming</span>
+              <span class="tag">Security Awareness</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="sec-h">
+        <h2>Portfolio</h2>
+        <div class="hint">Selected work & case studies</div>
+      </div>
+      <div class="sec-b">
+        <div class="grid2">
+          <div class="item">
+            <div class="top"><div class="title">Hiring Pipeline (Discord)</div><div class="when">Case Study</div></div>
+            <div class="org">Recruiting → Evaluation → Onboarding</div>
+            <p>
+              A streamlined system designed to convert applicants into roles efficiently: stage clarity, consistent evaluation notes,
+              and repeatable onboarding steps.
+            </p>
+            <div class="tags">
+              <span class="tag">Recruiting</span>
+              <span class="tag">Systems</span>
+              <span class="tag">Workflows</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">Team Intelligence & Scouting</div><div class="when">Case Study</div></div>
+            <div class="org">Research and tracking framework</div>
+            <p>
+              A standardized method for tracking teams, contacts, rosters, and competitive focus—optimized for outreach
+              and partnership targeting.
+            </p>
+            <div class="tags">
+              <span class="tag">Scouting</span>
+              <span class="tag">Data Organization</span>
+              <span class="tag">Outreach</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="margin-top:14px;">
+          <div class="top"><div class="title">Public Links</div><div class="when">External</div></div>
+          <p>
+            Use the links below to view the public resume PDF and the portfolio page.
+          </p>
+          <div class="hero-actions" style="margin-top:12px;">
+            <a class="btn" href="./Quintin_Longardner_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+            <a class="btn" href="./portfolio.html">Open Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sec-h">
+        <h2>Contact</h2>
+        <div class="hint">Professional inquiries</div>
+      </div>
+      <div class="sec-b">
+        <div class="contact-grid">
+          <div class="item contact-card">
+            <div class="top"><div class="title">Message</div></div>
+            <p>
+              For professional inquiries, collaboration requests, recruiting discussions, or partnerships, please contact me using the information listed.
+              Include context and a clear objective.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="mailto:vyrelic@gmail.com?subject=Professional%20Inquiry%20—%20Quintin%20Longardner">
+                Email Me
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/quintin-longardner-347610391/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a class="btn ghost" href="./Quintin_Longardner_Resume.pdf" target="_blank" rel="noreferrer">
+                Resume (PDF)
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top"><div class="title">Details</div></div>
+            <div class="contact-list">
+              <div class="contact-row"><span>Email</span><strong>vyrelic@gmail.com</strong></div>
+              <div class="contact-row"><span>Location</span><strong>Indiana, USA</strong></div>
+              <div class="contact-row"><span>LinkedIn</span>
+                <strong>
+                  <a href="https://www.linkedin.com/in/quintin-longardner-347610391/" target="_blank" rel="noreferrer">
+                    quintin-longardner
+                  </a>
+                </strong>
+              </div>
+              <div class="contact-row"><span>Primary Focus</span><strong>Esports Operations & Leadership</strong></div>
+              <div class="contact-row"><span>Secondary Focus</span><strong>Cybersecurity & Global Policy</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Quintin “Vyrelic” Longardner. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

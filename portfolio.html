@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Portfolio — Quintin “Vyrelic” Longardner</title>
+  <meta name="description" content="Portfolio and case studies for Quintin “Vyrelic” Longardner." />
+
+  <style>
+    :root{
+      --bg:#0b0f16; --panel:rgba(17,24,38,.72); --text:#e7ecf3; --muted:#aab6c6; --line:rgba(255,255,255,.10);
+      --accent:#d8b36a; --accent2:#8aa4c6; --shadow:0 16px 50px rgba(0,0,0,.38); --radius:18px; --max:1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font-family:var(--font); color:var(--text);
+      background:
+        radial-gradient(1100px 700px at 20% 0%, rgba(216,179,106,.12), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(138,164,198,.12), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{ color:var(--text); text-decoration:none; }
+    a:hover{ text-decoration:underline; text-underline-offset:3px; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px; }
+
+    header{
+      padding:18px; border:1px solid var(--line); border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(17,24,38,.90), rgba(15,23,36,.74));
+      box-shadow:var(--shadow);
+    }
+    h1{ margin:0 0 8px; font-family:var(--serif); font-size:32px; line-height:1.15; }
+    .sub{ margin:0; color:var(--muted); max-width:85ch; font-size:14.5px; }
+    .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line); background:rgba(255,255,255,.03);
+      font-size:13.5px;
+    }
+    .btn:hover{ border-color:rgba(216,179,106,.35); background:rgba(216,179,106,.07); text-decoration:none; }
+    .btn.primary{ border-color:rgba(216,179,106,.52); background:linear-gradient(180deg, rgba(216,179,106,.20), rgba(216,179,106,.08)); }
+
+    section{
+      margin-top:16px; border:1px solid var(--line); border-radius:var(--radius);
+      background:var(--panel); box-shadow:0 10px 28px rgba(0,0,0,.25); overflow:hidden;
+    }
+    .sec-h{
+      padding:14px 16px; display:flex; justify-content:space-between; gap:10px; align-items:baseline;
+      border-bottom:1px solid var(--line); background:rgba(0,0,0,.16);
+    }
+    .sec-h h2{ margin:0; font-family:var(--serif); font-size:16px; letter-spacing:.2px; }
+    .sec-h .hint{ color:var(--muted); font-size:12.5px; }
+    .sec-b{ padding:14px 16px 16px; }
+
+    .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .card{
+      border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.16);
+      border-radius:14px; padding:14px;
+    }
+    .card .top{ display:flex; justify-content:space-between; gap:12px; align-items:baseline; flex-wrap:wrap; }
+    .title{ font-weight:720; letter-spacing:.12px; }
+    .meta{ color:var(--muted); font-size:12.5px; }
+    .org{ color:var(--accent2); font-size:13px; margin:6px 0 0; }
+    p{ margin:10px 0 0; color:var(--muted); font-size:13.5px; line-height:1.6; }
+    ul{ margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13.5px; line-height:1.6; }
+
+    .pillrow{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .pill{ font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.03); padding:6px 10px; border-radius:999px; }
+
+    footer{ text-align:center; color:var(--muted); font-size:12.5px; margin-top:16px; }
+    @media (max-width: 860px){ .grid2{ grid-template-columns:1fr; } }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Portfolio</h1>
+      <p class="sub">
+        Case studies and work products focused on esports operations, recruiting systems, documentation-first execution,
+        and organization building.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="./index.html">Back to Site</a>
+
+        <!-- Resume PDF inserted here -->
+        <a class="btn" href="./Quintin_Longardner_Resume.pdf" target="_blank" rel="noreferrer">Public Resume (PDF)</a>
+
+        <a class="btn" href="https://www.linkedin.com/in/quintin-longardner-347610391/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:vyrelic@gmail.com?subject=Professional%20Inquiry%20—%20Portfolio">Email</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="sec-h">
+        <h2>Case Studies</h2>
+        <div class="hint">Operational systems</div>
+      </div>
+      <div class="sec-b">
+        <div class="grid2">
+          <div class="card">
+            <div class="top">
+              <div class="title">Hiring Pipeline (Discord)</div>
+              <div class="meta">System Design</div>
+            </div>
+            <div class="org">Recruiting → Evaluation → Onboarding</div>
+            <p>
+              A structured pipeline designed to convert interest into action: stage-gated flow, consistent evaluation notes,
+              and repeatable onboarding steps for fast execution.
+            </p>
+            <ul>
+              <li>Defined stages, responsibilities, and entry/exit criteria</li>
+              <li>Standardized evaluation prompts and tracking fields</li>
+              <li>Improved clarity for applicants and internal reviewers</li>
+            </ul>
+            <div class="pillrow">
+              <span class="pill">Recruiting</span><span class="pill">Workflow</span><span class="pill">Documentation</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="top">
+              <div class="title">Team Intelligence & Scouting</div>
+              <div class="meta">Research Framework</div>
+            </div>
+            <div class="org">Competitive tracking and outreach</div>
+            <p>
+              A standardized method for researching teams, identifying contacts, tracking rosters, and maintaining outreach-ready records.
+              Optimized for speed, consistency, and actionable follow-up.
+            </p>
+            <ul>
+              <li>Consistent fields: region, contacts, rosters, Discord, platforms</li>
+              <li>Repeatable sourcing method to maintain quality</li>
+              <li>Designed for promotion and partnership targeting</li>
+            </ul>
+            <div class="pillrow">
+              <span class="pill">Scouting</span><span class="pill">Data</span><span class="pill">Outreach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-h">
+        <h2>Public Links</h2>
+        <div class="hint">Downloads</div>
+      </div>
+      <div class="sec-b">
+        <div class="card">
+          <div class="top">
+            <div class="title">Resume PDF</div>
+            <div class="meta">Public</div>
+          </div>
+          <p>
+            Download or view my resume in PDF format:
+          </p>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn primary" href="./Quintin_Longardner_Resume.pdf" target="_blank" rel="noreferrer">Open Resume (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Quintin “Vyrelic” Longardner
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
